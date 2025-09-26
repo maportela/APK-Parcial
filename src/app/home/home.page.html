@@ -1,20 +1,75 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<!-- cabeçalho da página -->
+<ion-content>
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-buttons slot="start">
+        <ion-img src="assets/logo.png" class="logo-img"></ion-img>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button class="login-button" fill="solid">LOGIN</ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- imagem de inicio-->
+  <div class="hero-section">
+    <ion-img src="assets/fundo.jpg" alt="Imagem principal"></ion-img>
   </div>
+
+  <!-- conteudo da parte de sobre nós, apis usadas e o recurso nativo -->
+  <section class="about-section">
+    <h2>SOBRE NÓS</h2>
+    <div class="content-wrapper">
+      <p>O MediShare é um aplicativo colaborativo e acessível para a doação e compartilhamento de medicamentos, promovendo solidariedade, reduzindo desperdícios e ampliando o acesso de pessoas a remédios que necessitam, de forma prática e segura.</p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>APIs USADAS</h3>
+          <ul>
+            <li *ngFor="let api of apis">
+              <a href="{{ api.link }}" target="_blank">{{ api.name }}</a> - {{ api.description }}
+            </li>
+          </ul>
+        </div>
+        
+        <div class="feature-item">
+          <h3>RECURSO NATIVO</h3>
+          <p>{{ nativeResource }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- sobre a equipe -->
+  <section class="team-section">
+    <h2>SOBRE A EQUIPE</h2>
+    <div class="team-grid">
+      <div class="student-card" *ngFor="let student of students">
+        <div class="photo-container">
+          <ion-img [src]="student.photo" alt="{{ student.name }}"></ion-img>
+        </div>
+        <div class="student-info">
+          <h4>{{ student.name }}</h4>
+          <div class="student-details">
+            <span class="detail-item">Turma: {{ turma }}</span>
+            <span class="detail-item">Turno: {{ turno }}</span>
+            <span class="detail-item">Unidade: {{ unidade }}</span>
+            <span class="detail-item">Período: {{ periodo }}</span>
+            <span class="detail-item">Ano: {{ ano }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--rodapé -->
+  <ion-footer>
+    <div class="footer-section">
+      <p>© 2025 MediShare</p>
+      <div class="legal-links">
+        <a href="#" class="legal-link">Termos de Uso</a>
+        <span class="separator">|</span>
+        <a href="#" class="legal-link">Política de Privacidade</a>
+      </div>
+    </div>
+  </ion-footer>
 </ion-content>
