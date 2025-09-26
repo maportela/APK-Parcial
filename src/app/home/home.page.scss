@@ -234,3 +234,17 @@ ion-header {
     flex-wrap: wrap;
   }
 }
+
+.feature-item ion-input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #a6d0ff;
+  font-size: 1rem;
+}
+
+.feature-item ion-button {
+  margin-right: 10px;
+  margin-top: 5px;
+}

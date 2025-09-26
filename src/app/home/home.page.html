@@ -30,6 +30,14 @@
             </li>
           </ul>
         </div>
+
+        <div class="feature-item">
+          <h3>Desafio Plus - Armazenamento</h3>
+          <ion-input [(ngModel)]="userText" placeholder="Digite algo para salvar"></ion-input>
+          <ion-button (click)="saveFile()" color="primary">Salvar Arquivo</ion-button>
+          <ion-button (click)="readFile()" color="secondary">Ler Arquivo</ion-button>
+          <p *ngIf="fileContent">{{ fileContent }}</p>
+        </div>
         
         <div class="feature-item">
           <h3>RECURSO NATIVO</h3>
