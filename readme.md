@@ -11,8 +11,8 @@ O projeto ‘MediShare’ tem como objetivo desenvolver um aplicativo colaborati
 
 ## Anexos
 - [Acesse o protótipo no Figma](https://www.figma.com/design/jbhoCtTo8c47DBClJmWfCe/MediShare?node-id=0-1&t=EwPQle0mdrxsSBmi-1)
-- ![Logo MediShare](medi-share/src/assets/logo.png)
-- [Baixe o APK Parcial](medi-share/app-debug.apk)
+- ![Logo MediShare](..\medi-share\src\assets\logo.png)
+- [Baixe o APK Parcial](..\medi-share\app-debug.apk)
 
 ## Equipe
 - Maria Clara Martinez Bassi Portela
